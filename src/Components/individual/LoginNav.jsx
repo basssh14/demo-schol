@@ -12,7 +12,7 @@ function LoginNav(props) {
     <Fragment>
       <header
         id="site-header"
-        className="w-full h-20/2 relative px-5 lg1:px-2  bg-white text-gray-900"
+        className="w-full h-20/2 relative px-5 lg1:px-2  bg-white text-gray-900 usm:h-20"
       >
         <section className="navigation relative bg-white">
           <div className="nav-container">

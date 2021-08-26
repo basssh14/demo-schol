@@ -36,7 +36,7 @@ function Pay() {
               rounded-2xl
               relative
               sm3:h-24/2
-              usm:h-1/6
+              usm:h-1/3
             "
               >
                 <div

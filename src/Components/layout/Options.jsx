@@ -20,7 +20,7 @@ function Options() {
               rounded-2xl
               relative
               usm:h-1/6
-              sm3:h-24/2
+              sm3:h-1/3
             "
               >
                 <div
