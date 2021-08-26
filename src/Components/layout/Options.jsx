@@ -19,8 +19,8 @@ function Options() {
               bg-white
               rounded-2xl
               relative
-              usm:h-1/6
-              sm3:h-1/3
+              usm:h-1/3
+              sm3:h-1/6
             "
               >
                 <div
