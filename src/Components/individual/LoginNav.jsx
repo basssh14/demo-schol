@@ -12,7 +12,7 @@ function LoginNav(props) {
     <Fragment>
       <header
         id="site-header"
-        className="w-full h-20/2 relative px-5 lg1:px-2  bg-white text-gray-900 usm:h-20"
+        className="w-full h-20/2 relative px-5 lg1:px-2  bg-white text-gray-900"
       >
         <section className="navigation relative bg-white">
           <div className="nav-container">
@@ -20,7 +20,7 @@ function LoginNav(props) {
               <Link to="/">Scholarship App</Link>
             </div>
             <nav className="mt-4 lg1:mt-1 z-50">
-              <div className="nav-mobile bg-white z-50">
+              <div className="nav-mobile bg-transparent z-50">
                 <a id="nav-toggle" href="#!" onClick={() => controlMobMenu()}>
                   <span></span>
                 </a>
