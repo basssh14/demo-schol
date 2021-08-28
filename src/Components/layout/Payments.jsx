@@ -17,7 +17,7 @@ function Payments() {
     <Fragment>
       <div className="w-full h-full relative">
         <Header />
-        <main className="w-full h-180/2 padding-12 sm2:p-5">
+        <main className="w-3/5 h-180/2 absolute centerHorizontal sm2:p-5 lg3:w-2/3 lg2:w-4/5 lg1:w-180/2">
           <div className="w-full h-full relative">
             <div className="w-full h-180/2 centerSom bg-white">
               <div

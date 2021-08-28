@@ -9,7 +9,7 @@ function Options() {
     <Fragment>
       <div className="w-full h-full relative">
         <Header />
-        <main className="w-full h-180/2 padding-12 sm2:p-5">
+        <main className="w-1/2 h-180/2 absolute centerHorizontal sm2:p-5 lg3:w-3/5 lg2:w-3/4 lg1:w-180/2">
           <div className="w-full h-full relative">
             <div className="w-full h-180/2 centerSom bg-transparent">
               <div
@@ -19,15 +19,15 @@ function Options() {
               bg-white
               rounded-2xl
               relative
-              usm:h-1/6
-              sm3:h-1/3
+              usm:h-1/3
+              sm3:h-1/6
             "
               >
                 <div
                   className="
-                w-4/5
+                w-full
                 h-1/2
-                ml-3
+                px-3
                 absolute
                 centerVertical
                 grid grid-cols-8

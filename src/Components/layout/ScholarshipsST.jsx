@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import HeaderUser from "../individual/HeaderUser";
 import { Link } from "react-router-dom";
@@ -6,11 +6,23 @@ import { Link } from "react-router-dom";
 function ScholarshipsST(props) {
   const [newSchoPop, setNewSchoPop] = useState("hidden");
   const [schoPop, setSchoPop] = useState("hidden");
+  const [imageCnPop, setImageCnPop] = useState("hidden");
+  const [imageStPop, setImageStPop] = useState("hidden");
+  const [imageIdPop, setImageIdPop] = useState("hidden");
   const changeNewSchoPop = () => {
     newSchoPop === "hidden" ? setNewSchoPop(" ") : setNewSchoPop("hidden");
   };
   const changeSchoPop = () => {
     schoPop === "hidden" ? setSchoPop(" ") : setSchoPop("hidden");
+  };
+  const changeImageCnPop = () => {
+    imageCnPop === "hidden" ? setImageCnPop(" ") : setImageCnPop("hidden");
+  };
+  const changeImageStPop = () => {
+    imageStPop === "hidden" ? setImageStPop(" ") : setImageStPop("hidden");
+  };
+  const changeImageIdPop = () => {
+    imageIdPop === "hidden" ? setImageIdPop(" ") : setImageIdPop("hidden");
   };
   return (
     <Fragment>
@@ -501,24 +513,19 @@ function ScholarshipsST(props) {
                       >
                         CNIC PHOTO
                       </label>
-                      <div className="flex items-center justify-center w-full">
-                        <label
-                          className="
-                          flex flex-col
-                          border-2 border-black
-                          w-full
-                          h-64
-                          hover:bg-gray-100 hover:border-gray-300
-                          group
-                        "
+                      <div className="flex items-center justify-left w-full">
+                        <button
+                          id="imageCn"
+                          className="w-auto h-8 px-2 mb-3  bg-gray-100 usm:mb-3 border border-gray-500"
+                          onClick={() => {
+                            changeImageCnPop();
+                          }}
                         >
-                          <div className="flex flex-col items-center justify-center pt-0">
-                            <img
-                              src="./img/Pakistani-CNIC-of-chinese-man.jpg"
-                              className="bg-cover w-full h-60"
-                            />
-                          </div>
-                        </label>
+                          Check Image
+                        </button>
+                      </div>
+                      <div className="flex items-center justify-left w-full">
+                        <input type="file" />
                       </div>
                     </div>
                     <div className="grid grid-cols-1">
@@ -533,24 +540,16 @@ function ScholarshipsST(props) {
                       >
                         STUDENT PHOTO
                       </label>
-                      <div className="flex items-center justify-center w-full">
-                        <label
-                          className="
-                          flex flex-col
-                          border-2 border-black
-                          w-full
-                          h-64
-                          hover:bg-gray-100 hover:border-gray-300
-                          group
-                        "
+                      <div className="flex items-center justify-left w-full">
+                        <button
+                          className="w-auto h-8 px-2 mb-3  bg-gray-100 usm:mb-3 border border-gray-500"
+                          onClick={() => changeImageStPop()}
                         >
-                          <div className="flex flex-col items-center justify-center pt-0">
-                            <img
-                              src="./img/graduate-member.jpg"
-                              className="bg-cover w-full h-60"
-                            />
-                          </div>
-                        </label>
+                          Check Image
+                        </button>
+                      </div>
+                      <div className="flex items-center justify-left w-full">
+                        <input type="file" />
                       </div>
                     </div>
                   </div>
@@ -949,24 +948,16 @@ function ScholarshipsST(props) {
                       >
                         ID CARD PHOTO
                       </label>
-                      <div className="flex items-center justify-center w-full">
-                        <label
-                          className="
-                          flex flex-col
-                          border-2 border-black
-                          w-full
-                          h-64
-                          hover:bg-gray-100 hover:border-gray-300
-                          group
-                        "
+                      <div className="flex items-center justify-left w-full">
+                        <button
+                          className="w-auto h-8 px-2 mb-3  bg-gray-100 usm:mb-3 border border-gray-500"
+                          onClick={() => changeImageIdPop()}
                         >
-                          <div className="flex flex-col items-center justify-center pt-0">
-                            <img
-                              src="./img/Pakistani-CNIC-of-chinese-man.jpg"
-                              className="bg-cover w-full h-60"
-                            />
-                          </div>
-                        </label>
+                          Check Image
+                        </button>
+                      </div>
+                      <div className="flex items-center justify-left w-full">
+                        <input type="file" />
                       </div>
                     </div>
                     <div className="grid grid-cols-1">
@@ -981,51 +972,13 @@ function ScholarshipsST(props) {
                       >
                         ADMISSION RECEIPT COPY
                       </label>
-                      <div className="flex items-center justify-center w-full">
-                        <label
-                          className="
-                          flex flex-col
-                          border-4 border-dashed
-                          w-full
-                          h-32
-                          hover:bg-gray-100 hover:border-gray-300
-                          group
-                        "
-                        >
-                          <div className="flex flex-col items-center justify-center pt-7">
-                            <svg
-                              className="
-                              w-10
-                              h-10
-                              text-gray-400
-                              group-hover:text-gray-600
-                            "
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                              ></path>
-                            </svg>
-                            <p
-                              className="
-                              lowercase
-                              text-sm text-gray-400
-                              group-hover:text-gray-600
-                              pt-1
-                              tracking-wider
-                            "
-                            >
-                              Click to Download
-                            </p>
-                          </div>
-                          <input type="file" className="hidden" />
-                        </label>
+                      <div className="flex items-center justify-left w-full">
+                        <button className="w-auto h-8 px-2 mb-3  bg-gray-100 usm:mb-3 border border-gray-500">
+                          Donwload file
+                        </button>
+                      </div>
+                      <div className="flex items-center justify-left w-full">
+                        <input type="file" />
                       </div>
                     </div>
                   </div>
@@ -1280,50 +1233,13 @@ function ScholarshipsST(props) {
                       >
                         Exam result sheet
                       </label>
-                      <div className="flex items-center justify-center w-full">
-                        <label
-                          className="
-                          flex flex-col
-                          border-4 border-dashed
-                          w-full
-                          h-32
-                          hover:bg-gray-100 hover:border-gray-300
-                          group
-                        "
-                        >
-                          <div className="flex flex-col items-center justify-center pt-7">
-                            <svg
-                              className="
-                              w-10
-                              h-10
-                              text-gray-400
-                              group-hover:text-gray-600
-                            "
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                              ></path>
-                            </svg>
-                            <p
-                              className="
-                              lowercase
-                              text-sm text-gray-400
-                              group-hover:text-gray-600
-                              pt-1
-                              tracking-wider
-                            "
-                            >
-                              Click to download
-                            </p>
-                          </div>
-                        </label>
+                      <div className="flex items-center justify-left w-full">
+                        <button className="w-auto h-8 px-2 mb-3  bg-gray-100 usm:mb-3 border border-gray-500">
+                          Donwload file
+                        </button>
+                      </div>
+                      <div className="flex items-center justify-left w-full">
+                        <input type="file" />
                       </div>
                     </div>
                   </div>
@@ -1685,51 +1601,8 @@ function ScholarshipsST(props) {
                       >
                         CNIC PHOTO
                       </label>
-                      <div className="flex items-center justify-center w-full">
-                        <label
-                          className="
-                      flex flex-col
-                      border-4 border-dashed
-                      w-full
-                      h-32
-                      hover:bg-gray-100 hover:border-gray-300
-                      group
-                    "
-                        >
-                          <div className="flex flex-col items-center justify-center pt-7">
-                            <svg
-                              className="
-                          w-10
-                          h-10
-                          text-gray-400
-                          group-hover:text-gray-600
-                        "
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                              ></path>
-                            </svg>
-                            <p
-                              className="
-                          lowercase
-                          text-sm text-gray-400
-                          group-hover:text-gray-600
-                          pt-1
-                          tracking-wider
-                        "
-                            >
-                              Select a photo
-                            </p>
-                          </div>
-                          <input type="file" className="hidden" />
-                        </label>
+                      <div className="flex items-center justify-left w-full">
+                        <input type="file" className="" />
                       </div>
                     </div>
                     <div className="grid grid-cols-1">
@@ -1744,51 +1617,8 @@ function ScholarshipsST(props) {
                       >
                         STUDENT PHOTO
                       </label>
-                      <div className="flex items-center justify-center w-full">
-                        <label
-                          className="
-                      flex flex-col
-                      border-4 border-dashed
-                      w-full
-                      h-32
-                      hover:bg-gray-100 hover:border-gray-300
-                      group
-                    "
-                        >
-                          <div className="flex flex-col items-center justify-center pt-7">
-                            <svg
-                              className="
-                          w-10
-                          h-10
-                          text-gray-400
-                          group-hover:text-gray-600
-                        "
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                              ></path>
-                            </svg>
-                            <p
-                              className="
-                          lowercase
-                          text-sm text-gray-400
-                          group-hover:text-gray-600
-                          pt-1
-                          tracking-wider
-                        "
-                            >
-                              Select a photo
-                            </p>
-                          </div>
-                          <input type="file" className="hidden" />
-                        </label>
+                      <div className="flex items-center justify-left w-full">
+                        <input type="file" className="" />
                       </div>
                     </div>
                   </div>
@@ -2160,51 +1990,8 @@ function ScholarshipsST(props) {
                       >
                         ID CARD PHOTO
                       </label>
-                      <div className="flex items-center justify-center w-full">
-                        <label
-                          className="
-                      flex flex-col
-                      border-4 border-dashed
-                      w-full
-                      h-32
-                      hover:bg-gray-100 hover:border-gray-300
-                      group
-                    "
-                        >
-                          <div className="flex flex-col items-center justify-center pt-7">
-                            <svg
-                              className="
-                          w-10
-                          h-10
-                          text-gray-400
-                          group-hover:text-gray-600
-                        "
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                              ></path>
-                            </svg>
-                            <p
-                              className="
-                          lowercase
-                          text-sm text-gray-400
-                          group-hover:text-gray-600
-                          pt-1
-                          tracking-wider
-                        "
-                            >
-                              Select a photo
-                            </p>
-                          </div>
-                          <input type="file" className="hidden" />
-                        </label>
+                      <div className="flex items-center justify-left w-full">
+                        <input type="file" className="" />
                       </div>
                     </div>
                     <div className="grid grid-cols-1">
@@ -2219,51 +2006,8 @@ function ScholarshipsST(props) {
                       >
                         ADMISSION RECEIPT COPY
                       </label>
-                      <div className="flex items-center justify-center w-full">
-                        <label
-                          className="
-                      flex flex-col
-                      border-4 border-dashed
-                      w-full
-                      h-32
-                      hover:bg-gray-100 hover:border-gray-300
-                      group
-                    "
-                        >
-                          <div className="flex flex-col items-center justify-center pt-7">
-                            <svg
-                              className="
-                          w-10
-                          h-10
-                          text-gray-400
-                          group-hover:text-gray-600
-                        "
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                              ></path>
-                            </svg>
-                            <p
-                              className="
-                          lowercase
-                          text-sm text-gray-400
-                          group-hover:text-gray-600
-                          pt-1
-                          tracking-wider
-                        "
-                            >
-                              CHOOSE A FILE
-                            </p>
-                          </div>
-                          <input type="file" className="hidden" />
-                        </label>
+                      <div className="flex items-center justify-left w-full">
+                        <input type="file" />
                       </div>
                     </div>
                   </div>
@@ -2508,51 +2252,8 @@ function ScholarshipsST(props) {
                       >
                         Exam result sheet
                       </label>
-                      <div className="flex items-center justify-center w-full">
-                        <label
-                          className="
-                      flex flex-col
-                      border-4 border-dashed
-                      w-full
-                      h-32
-                      hover:bg-gray-100 hover:border-gray-300
-                      group
-                    "
-                        >
-                          <div className="flex flex-col items-center justify-center pt-7">
-                            <svg
-                              className="
-                          w-10
-                          h-10
-                          text-gray-400
-                          group-hover:text-gray-600
-                        "
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                              ></path>
-                            </svg>
-                            <p
-                              className="
-                          lowercase
-                          text-sm text-gray-400
-                          group-hover:text-gray-600
-                          pt-1
-                          tracking-wider
-                        "
-                            >
-                              CHOOSE A FILE
-                            </p>
-                          </div>
-                          <input type="file" className="hidden" />
-                        </label>
+                      <div className="flex items-center justify-left w-full">
+                        <input type="file" className="" />
                       </div>
                     </div>
                   </div>
@@ -2689,6 +2390,60 @@ function ScholarshipsST(props) {
             </div>
           </div>
         </main>
+        {/* start of images pop ups */}
+        <div
+          className={`w-1/2 h-2/5 bg-white fixed  top-1/2   left-1/2 transform -translate-y-1/2 -translate-x-1/2 usm:h-1/3 border ${imageCnPop}`}
+        >
+          <div className="w-full h-full relative">
+            <img
+              src="./img/Pakistani-CNIC-of-chinese-man.jpg"
+              className="w-full h-full bg-cover"
+              alt="bank check"
+            />
+            <button
+              className="w-10 h-10 absolute top-0 right-0 text-4xl text-black"
+              onClick={() => changeImageCnPop()}
+            >
+              X
+            </button>
+          </div>
+        </div>
+        <div
+          className={`w-2/5 h-2/5 bg-white fixed  top-1/2   left-1/2 transform -translate-y-1/2 -translate-x-1/2 usm:h-1/5 border ${imageStPop}`}
+        >
+          <div className="w-full h-full relative">
+            <img
+              src="./img/graduate-member.jpg"
+              className="w-full h-full bg-cover"
+              alt="bank check"
+            />
+            <button
+              className="w-10 h-10 absolute top-0 right-0 text-4xl text-black"
+              onClick={() => changeImageStPop()}
+            >
+              X
+            </button>
+          </div>
+        </div>
+
+        <div
+          className={`w-2/5 h-2/5 bg-white fixed  top-1/2   left-1/2 transform -translate-y-1/2 -translate-x-1/2 usm:h-1/3 border ${imageIdPop}`}
+        >
+          <div className="w-full h-full relative">
+            <img
+              src="./img/Pakistani-CNIC-of-chinese-man.jpg"
+              className="w-full h-full bg-cover"
+              alt="bank check"
+            />
+            <button
+              className="w-10 h-10 absolute top-0 right-0 text-4xl text-black"
+              onClick={() => changeImageIdPop()}
+            >
+              X
+            </button>
+          </div>
+        </div>
+        {/* End of images pop ups */}
       </div>
     </Fragment>
   );

@@ -8,6 +8,26 @@ function Students() {
   const [paymentsPop, setPaymentsPop] = useState("hidden");
   const [reportsPop, setReportsPop] = useState("hidden");
   const [studentInfoPop, setStudentInfoPop] = useState("hidden");
+  const [cnPhoto, setCnPhoto] = useState("hidden");
+  const [stPhoto, setStPhoto] = useState("hidden");
+  const [prPhoto, setPrPhoto] = useState("hidden");
+  const [idPhoto, setIdPhoto] = useState("hidden");
+  const [bkPhoto, setBkPhoto] = useState("hidden");
+  const changeCnPhoto = () => {
+    cnPhoto === "hidden" ? setCnPhoto(" ") : setCnPhoto("hidden");
+  };
+  const changeStPhoto = () => {
+    stPhoto === "hidden" ? setStPhoto(" ") : setStPhoto("hidden");
+  };
+  const changePrPhoto = () => {
+    prPhoto === "hidden" ? setPrPhoto(" ") : setPrPhoto("hidden");
+  };
+  const changeIdPhoto = () => {
+    idPhoto === "hidden" ? setIdPhoto(" ") : setIdPhoto("hidden");
+  };
+  const changeBkPhoto = () => {
+    bkPhoto === "hidden" ? setBkPhoto(" ") : setBkPhoto("hidden");
+  };
   const changePaymentsPop = () => {
     if (paymentsPop === "hidden") {
       setReportsPop("hidden");
@@ -37,7 +57,7 @@ function Students() {
     <Fragment>
       <div className="w-full h-full relative">
         <Header />
-        <main className="w-full h-180/2 padding-12 sm2:p-5">
+        <main className="w-1/2 h-180/2 absolute centerHorizontal sm2:p-5 lg3:w-3/5 lg2:w-3/4 lg1:w-180/2">
           <div className="w-full h-full relative">
             <div className="w-full h-180/2 centerSom bg-white">
               <div
@@ -1005,25 +1025,19 @@ function Students() {
                           >
                             CNIC PHOTO
                           </label>
-                          <div className="flex items-center justify-center w-full">
-                            <label
-                              className="
-                          flex flex-col
-                          border-2 border-black
-                          w-full
-                          h-64
-                          hover:bg-gray-100 hover:border-gray-300
-                          group
-                        "
+                          <div className="flex items-center justify-left w-full">
+                            <button
+                              id="imageCn"
+                              className="w-auto h-8 px-2 mb-3  bg-gray-100 usm:mb-3 border border-gray-500"
+                              onClick={() => {
+                                changeCnPhoto();
+                              }}
                             >
-                              <div className="flex flex-col items-center justify-center pt-0">
-                                <img
-                                  src="./img/Pakistani-CNIC-of-chinese-man.jpg"
-                                  className="bg-cover w-full h-60"
-                                  alt="demo id"
-                                />
-                              </div>
-                            </label>
+                              Check Image
+                            </button>
+                          </div>
+                          <div className="flex items-center justify-left w-full">
+                            <input type="file" />
                           </div>
                         </div>
                         <div className="grid grid-cols-1">
@@ -1038,25 +1052,19 @@ function Students() {
                           >
                             STUDENT PHOTO
                           </label>
-                          <div className="flex items-center justify-center w-full">
-                            <label
-                              className="
-                          flex flex-col
-                          border-2 border-black
-                          w-full
-                          h-64
-                          hover:bg-gray-100 hover:border-gray-300
-                          group
-                        "
+                          <div className="flex items-center justify-left w-full">
+                            <button
+                              id="imageCn"
+                              className="w-auto h-8 px-2 mb-3  bg-gray-100 usm:mb-3 border border-gray-500"
+                              onClick={() => {
+                                changeStPhoto();
+                              }}
                             >
-                              <div className="flex flex-col items-center justify-center pt-0">
-                                <img
-                                  src="./img/graduate-member.jpg"
-                                  className="bg-cover w-full h-60"
-                                  alt="demo id"
-                                />
-                              </div>
-                            </label>
+                              Check Image
+                            </button>
+                          </div>
+                          <div className="flex items-center justify-left w-full">
+                            <input type="file" />
                           </div>
                         </div>
                       </div>
@@ -1347,25 +1355,19 @@ function Students() {
                           >
                             CNIC PHOTO
                           </label>
-                          <div className="flex items-center justify-center w-full">
-                            <label
-                              className="
-                          flex flex-col
-                          border-2 border-black
-                          w-full
-                          h-64
-                          hover:bg-gray-100 hover:border-gray-300
-                          group
-                        "
+                          <div className="flex items-center justify-left w-full">
+                            <button
+                              id="imageCn"
+                              className="w-auto h-8 px-2 mb-3  bg-gray-100 usm:mb-3 border border-gray-500"
+                              onClick={() => {
+                                changePrPhoto();
+                              }}
                             >
-                              <div className="flex flex-col items-center justify-center pt-0">
-                                <img
-                                  src="./img/Pakistani-CNIC-of-chinese-man.jpg"
-                                  className="bg-cover w-full h-60"
-                                  alt="demo id"
-                                />
-                              </div>
-                            </label>
+                              Check Image
+                            </button>
+                          </div>
+                          <div className="flex items-center justify-left w-full">
+                            <input type="file" />
                           </div>
                         </div>
                         <div className="grid grid-cols-1">
@@ -1380,51 +1382,13 @@ function Students() {
                           >
                             SALARY SLIP
                           </label>
-                          <div className="flex items-center justify-center w-full">
-                            <label
-                              className="
-                          flex flex-col
-                          border-4 border-dashed
-                          w-full
-                          h-32
-                          hover:bg-gray-100 hover:border-gray-300
-                          group
-                        "
-                            >
-                              <div className="flex flex-col items-center justify-center pt-7">
-                                <svg
-                                  className="
-                              w-10
-                              h-10
-                              text-gray-400
-                              group-hover:text-gray-600
-                            "
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                                  ></path>
-                                </svg>
-                                <p
-                                  className="
-                              lowercase
-                              text-sm text-gray-400
-                              group-hover:text-gray-600
-                              pt-1
-                              tracking-wider
-                            "
-                                >
-                                  Click to download
-                                </p>
-                              </div>
-                              <input type="file" className="hidden" />
-                            </label>
+                          <div className="flex items-center justify-left w-full">
+                            <button className="w-auto h-8 px-2 mb-3  bg-gray-100 usm:mb-3 border border-gray-500">
+                              Donwload file
+                            </button>
+                          </div>
+                          <div className="flex items-center justify-left w-full">
+                            <input type="file" />
                           </div>
                         </div>
                       </div>
@@ -1440,51 +1404,13 @@ function Students() {
                         >
                           QUALIFICATION DOCUMENT
                         </label>
-                        <div className="flex items-center justify-center w-full">
-                          <label
-                            className="
-                        flex flex-col
-                        border-4 border-dashed
-                        w-full
-                        h-32
-                        hover:bg-gray-100 hover:border-gray-300
-                        group
-                      "
-                          >
-                            <div className="flex flex-col items-center justify-center pt-7">
-                              <svg
-                                className="
-                            w-10
-                            h-10
-                            text-gray-400
-                            group-hover:text-gray-600
-                          "
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                                ></path>
-                              </svg>
-                              <p
-                                className="
-                            lowercase
-                            text-sm text-gray-400
-                            group-hover:text-gray-600
-                            pt-1
-                            tracking-wider
-                          "
-                              >
-                                Click to download
-                              </p>
-                            </div>
-                            <input type="file" className="hidden" />
-                          </label>
+                        <div className="flex items-center justify-left w-full">
+                          <button className="w-auto h-8 px-2 mb-3  bg-gray-100 usm:mb-3 border border-gray-500">
+                            Donwload file
+                          </button>
+                        </div>
+                        <div className="flex items-center justify-left w-full">
+                          <input type="file" />
                         </div>
                       </div>
                       <hr className="mt-5 border" />
@@ -1763,25 +1689,16 @@ function Students() {
                           >
                             ID CARD PHOTO
                           </label>
-                          <div className="flex items-center justify-center w-full">
-                            <label
-                              className="
-                          flex flex-col
-                          border-2 border-black
-                          w-full
-                          h-64
-                          hover:bg-gray-100 hover:border-gray-300
-                          group
-                        "
+                          <div className="flex items-center justify-left w-full">
+                            <button
+                              className="w-auto h-8 px-2 mb-3  bg-gray-100 usm:mb-3 border border-gray-500"
+                              onClick={() => changeIdPhoto()}
                             >
-                              <div className="flex flex-col items-center justify-center pt-0">
-                                <img
-                                  src="./img/Pakistani-CNIC-of-chinese-man.jpg"
-                                  className="bg-cover w-full h-60"
-                                  alt="demo id"
-                                />
-                              </div>
-                            </label>
+                              Check Image
+                            </button>
+                          </div>
+                          <div className="flex items-center justify-left w-full">
+                            <input type="file" />
                           </div>
                         </div>
                         <div className="grid grid-cols-1">
@@ -1796,50 +1713,13 @@ function Students() {
                           >
                             ADMISSION RECEIPT COPY
                           </label>
-                          <div className="flex items-center justify-center w-full">
-                            <label
-                              className="
-                          flex flex-col
-                          border-4 border-dashed
-                          w-full
-                          h-32
-                          hover:bg-gray-100 hover:border-gray-300
-                          group
-                        "
-                            >
-                              <div className="flex flex-col items-center justify-center pt-7">
-                                <svg
-                                  className="
-                              w-10
-                              h-10
-                              text-gray-400
-                              group-hover:text-gray-600
-                            "
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                                  ></path>
-                                </svg>
-                                <p
-                                  className="
-                              lowercase
-                              text-sm text-gray-400
-                              group-hover:text-gray-600
-                              pt-1
-                              tracking-wider
-                            "
-                                >
-                                  Click to Download
-                                </p>
-                              </div>
-                            </label>
+                          <div className="flex items-center justify-left w-full">
+                            <button className="w-auto h-8 px-2 mb-3  bg-gray-100 usm:mb-3 border border-gray-500">
+                              Donwload file
+                            </button>
+                          </div>
+                          <div className="flex items-center justify-left w-full">
+                            <input type="file" />
                           </div>
                         </div>
                       </div>
@@ -2074,25 +1954,16 @@ function Students() {
                           >
                             Copy of CHEQUE
                           </label>
-                          <div className="flex items-center justify-center w-full">
-                            <label
-                              className="
-                          flex flex-col
-                          border-2 border-black
-                          w-full
-                          h-64
-                          hover:bg-gray-100 hover:border-gray-300
-                          group
-                        "
+                          <div className="flex items-center justify-left w-full">
+                            <button
+                              className="w-auto h-8 px-2 mb-3  bg-gray-100 usm:mb-3 border border-gray-500"
+                              onClick={() => changeBkPhoto()}
                             >
-                              <div className="flex flex-col items-center justify-center pt-0">
-                                <img
-                                  src="./img/MeezanBank_PK.jpg"
-                                  className="bg-cover w-full h-60"
-                                  alt="demo id"
-                                />
-                              </div>
-                            </label>
+                              Check Image
+                            </button>
+                          </div>
+                          <div className="flex items-center justify-left w-full">
+                            <input type="file" />
                           </div>
                         </div>
                       </div>
@@ -2134,6 +2005,94 @@ function Students() {
             </div>
           </div>
         </main>
+        {/* start of images pop ups */}
+        <div
+          className={`w-2/5 h-2/5 bg-white fixed  top-1/2   left-1/2 transform -translate-y-1/2 -translate-x-1/2 usm:h-1/3 border ${cnPhoto}`}
+        >
+          <div className="w-full h-full relative">
+            <img
+              src="./img/Pakistani-CNIC-of-chinese-man.jpg"
+              className="w-full h-full bg-cover"
+              alt="bank check"
+            />
+            <button
+              className="w-10 h-10 absolute top-0 right-0 text-4xl text-black"
+              onClick={() => changeCnPhoto()}
+            >
+              X
+            </button>
+          </div>
+        </div>
+        <div
+          className={`w-2/5 h-2/5 bg-white fixed  top-1/2   left-1/2 transform -translate-y-1/2 -translate-x-1/2 usm:h-1/5 border ${stPhoto}`}
+        >
+          <div className="w-full h-full relative">
+            <img
+              src="./img/graduate-member.jpg"
+              className="w-full h-full bg-cover"
+              alt="bank check"
+            />
+            <button
+              className="w-10 h-10 absolute top-0 right-0 text-4xl text-black"
+              onClick={() => changeStPhoto()}
+            >
+              X
+            </button>
+          </div>
+        </div>
+
+        <div
+          className={`w-2/5 h-2/5 bg-white fixed  top-1/2   left-1/2 transform -translate-y-1/2 -translate-x-1/2 usm:h-1/3 border ${prPhoto}`}
+        >
+          <div className="w-full h-full relative">
+            <img
+              src="./img/Pakistani-CNIC-of-chinese-man.jpg"
+              className="w-full h-full bg-cover"
+              alt="bank check"
+            />
+            <button
+              className="w-10 h-10 absolute top-0 right-0 text-4xl text-black"
+              onClick={() => changePrPhoto()}
+            >
+              X
+            </button>
+          </div>
+        </div>
+        <div
+          className={`w-2/5 h-2/5 bg-white fixed  top-1/2   left-1/2 transform -translate-y-1/2 -translate-x-1/2 usm:h-1/3 border ${idPhoto}`}
+        >
+          <div className="w-full h-full relative">
+            <img
+              src="./img/Pakistani-CNIC-of-chinese-man.jpg"
+              className="w-full h-full bg-cover"
+              alt="bank check"
+            />
+            <button
+              className="w-10 h-10 absolute top-0 right-0 text-4xl text-black"
+              onClick={() => changeIdPhoto()}
+            >
+              X
+            </button>
+          </div>
+        </div>
+        <div
+          className={`w-2/5 h-2/5 bg-white fixed  top-1/2   left-1/2 transform -translate-y-1/2 -translate-x-1/2 usm:h-1/3 border ${bkPhoto}`}
+        >
+          <div className="w-full h-full relative">
+            <img
+              src="./img/MeezanBank_PK.jpg"
+              className="w-full h-full bg-cover"
+              alt="bank check"
+            />
+            <button
+              className="w-10 h-10 absolute top-0 right-0 text-4xl text-black"
+              onClick={() => changeBkPhoto()}
+            >
+              X
+            </button>
+          </div>
+        </div>
+        {/* End of images pop ups */}
       </div>
     </Fragment>
   );

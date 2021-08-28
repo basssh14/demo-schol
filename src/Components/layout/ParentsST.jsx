@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 function ParentsST(props) {
   const [parentPop, setParentPop] = useState("hidden");
   const [newParentPop, setNewParentPop] = useState("hidden");
+  const [imagePop, setImagePop] = useState("hidden");
   const changeParentPop = () => {
     if (parentPop === "hidden") {
       setParentPop(" ");
@@ -18,6 +19,13 @@ function ParentsST(props) {
       setNewParentPop(" ");
     } else {
       setNewParentPop("hidden");
+    }
+  };
+  const changeImagePop = () => {
+    if (imagePop === "hidden") {
+      setImagePop(" ");
+    } else {
+      setImagePop("hidden");
     }
   };
 
@@ -368,8 +376,8 @@ function ParentsST(props) {
                       >
                         CNIC COPY
                       </label>
-                      <div className="flex items-center justify-center w-full">
-                        <label
+                      <div className="flex items-center justify-left w-full">
+                        {/* <label
                           className="
                       flex flex-col
                       border-4 border-dashed
@@ -380,7 +388,7 @@ function ParentsST(props) {
                     "
                         >
                           <div className="flex flex-col items-center justify-center pt-7">
-                            <svg
+                             <svg
                               className="
                           w-10
                           h-10
@@ -398,7 +406,7 @@ function ParentsST(props) {
                                 stroke-width="2"
                                 d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
                               ></path>
-                            </svg>
+                            </svg> 
                             <p
                               className="
                           lowercase
@@ -412,7 +420,11 @@ function ParentsST(props) {
                             </p>
                           </div>
                           <input type="file" className="hidden" />
-                        </label>
+                        </label>  */}
+                        <input type="file" className="" />
+                        {/* <button className="w-auto h-auto py-3 px-3 rounded-lg bg-gray-700">
+                          Check
+                        </button> */}
                       </div>
                     </div>
                     <div className="grid grid-cols-1">
@@ -427,8 +439,8 @@ function ParentsST(props) {
                       >
                         SALARY SLIP
                       </label>
-                      <div className="flex items-center justify-center w-full">
-                        <label
+                      <div className="flex items-center justify-left w-full">
+                        {/* <label
                           className="
                       flex flex-col
                       border-4 border-dashed
@@ -470,8 +482,9 @@ function ParentsST(props) {
                               CHOOSE FILE
                             </p>
                           </div>
-                          <input type="file" className="hidden" />
-                        </label>
+                          
+                        </label> */}
+                        <input type="file" className="" />
                       </div>
                     </div>
                   </div>
@@ -487,46 +500,8 @@ function ParentsST(props) {
                     >
                       QUALIFICATION DOCUMENT
                     </label>
-                    <div className="flex items-center justify-center w-full">
-                      <label
-                        className="
-                    flex flex-col
-                    border-4 border-dashed
-                    w-full
-                    h-32
-                    hover:bg-gray-100 hover:border-gray-300
-                    group
-                  "
-                      >
-                        <div className="flex flex-col items-center justify-center pt-7">
-                          <svg
-                            className="w-10 h-10 text-gray-400 group-hover:text-gray-600"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                            ></path>
-                          </svg>
-                          <p
-                            className="
-                        lowercase
-                        text-sm text-gray-400
-                        group-hover:text-gray-600
-                        pt-1
-                        tracking-wider
-                      "
-                          >
-                            CHOOSE FILE
-                          </p>
-                        </div>
-                        <input type="file" className="hidden" />
-                      </label>
+                    <div className="flex items-center justify-left w-full">
+                      <input type="file" className="" />
                     </div>
                   </div>
                   <div className="flex items-center justify-center md:gap-8 gap-4 pt-5 pb-5">
@@ -823,24 +798,16 @@ function ParentsST(props) {
                       >
                         CNIC PHOTO
                       </label>
-                      <div className="flex items-center justify-center w-full">
-                        <label
-                          className="
-                          flex flex-col
-                          border-2 border-black
-                          w-full
-                          h-64
-                          hover:bg-gray-100 hover:border-gray-300
-                          group
-                        "
+                      <div className="flex items-center justify-left w-full">
+                        <button
+                          className="w-auto h-8 px-2 mb-3  bg-gray-100 usm:mb-3 border border-gray-500"
+                          onClick={() => changeImagePop()}
                         >
-                          <div className="flex flex-col items-center justify-center pt-0">
-                            <img
-                              src="./img/Pakistani-CNIC-of-chinese-man.jpg"
-                              className="bg-cover w-full h-60"
-                            />
-                          </div>
-                        </label>
+                          Check Image
+                        </button>
+                      </div>
+                      <div className="flex items-center justify-left w-full">
+                        <input type="file" />
                       </div>
                     </div>
                     <div className="grid grid-cols-1">
@@ -855,51 +822,13 @@ function ParentsST(props) {
                       >
                         SALARY SLIP
                       </label>
-                      <div className="flex items-center justify-center w-full">
-                        <label
-                          className="
-                          flex flex-col
-                          border-4 border-dashed
-                          w-full
-                          h-32
-                          hover:bg-gray-100 hover:border-gray-300
-                          group
-                        "
-                        >
-                          <div className="flex flex-col items-center justify-center pt-7">
-                            <svg
-                              className="
-                              w-10
-                              h-10
-                              text-gray-400
-                              group-hover:text-gray-600
-                            "
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                              ></path>
-                            </svg>
-                            <p
-                              className="
-                              lowercase
-                              text-sm text-gray-400
-                              group-hover:text-gray-600
-                              pt-1
-                              tracking-wider
-                            "
-                            >
-                              Click to download
-                            </p>
-                          </div>
-                          <input type="file" className="hidden" />
-                        </label>
+                      <div className="flex items-center justify-left w-full">
+                        <button className="w-auto h-8 px-2 mb-3  bg-gray-100 usm:mb-3 border border-gray-500">
+                          Download Image
+                        </button>
+                      </div>
+                      <div className="flex items-center justify-left w-full">
+                        <input type="file" />
                       </div>
                     </div>
                   </div>
@@ -915,51 +844,13 @@ function ParentsST(props) {
                     >
                       QUALIFICATION DOCUMENT
                     </label>
-                    <div className="flex items-center justify-center w-full">
-                      <label
-                        className="
-                        flex flex-col
-                        border-4 border-dashed
-                        w-full
-                        h-32
-                        hover:bg-gray-100 hover:border-gray-300
-                        group
-                      "
-                      >
-                        <div className="flex flex-col items-center justify-center pt-7">
-                          <svg
-                            className="
-                            w-10
-                            h-10
-                            text-gray-400
-                            group-hover:text-gray-600
-                          "
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                            ></path>
-                          </svg>
-                          <p
-                            className="
-                            lowercase
-                            text-sm text-gray-400
-                            group-hover:text-gray-600
-                            pt-1
-                            tracking-wider
-                          "
-                          >
-                            Click to download
-                          </p>
-                        </div>
-                        <input type="file" className="hidden" />
-                      </label>
+                    <div className="flex items-center justify-left w-full">
+                      <button className="w-auto h-8 px-2 mb-3  bg-gray-100 usm:mb-3 border border-gray-500">
+                        Donwload file
+                      </button>
+                    </div>
+                    <div className="flex items-center justify-left w-full">
+                      <input type="file" />
                     </div>
                   </div>
                   <div className="flex items-center justify-center md:gap-8 gap-4 pt-5 pb-5">
@@ -997,6 +888,22 @@ function ParentsST(props) {
                   </div>
                 </div>
                 {/* end of parent information */}
+                <div
+                  className={`w-2/3 h-1/2 bg-white centerSom usm:h-1/3 border ${imagePop}`}
+                >
+                  <div className="w-full h-full relative">
+                    <img
+                      src="./img/Pakistani-CNIC-of-chinese-man.jpg"
+                      className="w-full h-full bg-cover"
+                    />
+                    <button
+                      className="w-10 h-10 absolute top-0 right-0 text-4xl text-black"
+                      onClick={() => changeImagePop()}
+                    >
+                      X
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
