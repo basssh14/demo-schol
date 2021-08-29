@@ -776,7 +776,7 @@ function Students() {
                       <div
                         className="
                     grid grid-cols-1
-                    md:grid-cols-2
+                    md:grid-cols-3
                     gap-5
                     md:gap-8
                     mt-5
@@ -838,18 +838,6 @@ function Students() {
                             value="152478459636"
                           />
                         </div>
-                      </div>
-                      {/* <!-- 2 row --> */}
-                      <div
-                        className="
-                    grid grid-cols-1
-                    md:grid-cols-2
-                    gap-5
-                    md:gap-8
-                    mt-5
-                    mx-7
-                  "
-                      >
                         <div className="grid grid-cols-1">
                           <label
                             className="
@@ -878,6 +866,18 @@ function Students() {
                             <option>Male</option>
                           </select>
                         </div>
+                      </div>
+                      {/* <!-- 2 row --> */}
+                      <div
+                        className="
+                    grid grid-cols-1
+                    md:grid-cols-3
+                    gap-5
+                    md:gap-8
+                    mt-5
+                    mx-7
+                  "
+                      >
                         <div className="grid grid-cols-1">
                           <label
                             className="
@@ -905,18 +905,6 @@ function Students() {
                             value="12"
                           />
                         </div>
-                      </div>
-                      {/* <!-- 3 row --> */}
-                      <div
-                        className="
-                    grid grid-cols-1
-                    md:grid-cols-2
-                    gap-5
-                    md:gap-8
-                    mt-5
-                    mx-7
-                  "
-                      >
                         <div className="grid grid-cols-1">
                           <label
                             className="
@@ -972,21 +960,32 @@ function Students() {
                           />
                         </div>
                       </div>
+                      {/* <!-- 3 row --> */}
 
-                      {/* <!-- 4 row --> */}
-                      <div className="grid grid-cols-1 mt-5 mx-7">
-                        <label
-                          className="
+                      {/* <!-- 5 row --> */}
+                      <div
+                        className="
+                    grid grid-cols-1
+                    md:grid-cols-3
+                    gap-5
+                    md:gap-8
+                    mt-5
+                    mx-7
+                  "
+                      >
+                        <div className="grid grid-cols-1 ">
+                          <label
+                            className="
                       uppercase
                       md:text-sm
                       text-xs text-gray-500 text-light
                       font-semibold
                     "
-                        >
-                          Email
-                        </label>
-                        <input
-                          className="
+                          >
+                            Email
+                          </label>
+                          <input
+                            className="
                       py-2
                       px-3
                       rounded-lg
@@ -997,22 +996,10 @@ function Students() {
                       focus:ring-gray-600
                       focus:border-transparent
                     "
-                          type="text"
-                          value="testemail@test.com"
-                        />
-                      </div>
-
-                      {/* <!-- 5 row --> */}
-                      <div
-                        className="
-                    grid grid-cols-1
-                    md:grid-cols-2
-                    gap-5
-                    md:gap-8
-                    mt-5
-                    mx-7
-                  "
-                      >
+                            type="text"
+                            value="testemail@test.com"
+                          />
+                        </div>
                         <div className="grid grid-cols-1">
                           <label
                             className="
@@ -1073,7 +1060,7 @@ function Students() {
                       <div
                         className="
                     grid grid-cols-1
-                    md:grid-cols-2
+                    md:grid-cols-3
                     gap-5
                     md:gap-8
                     mt-5
@@ -1109,21 +1096,22 @@ function Students() {
                             <option>Parent2</option>
                           </select>
                         </div>
-                      </div>
-                      {/* <!-- hidden form --> */}
-                      <div className="grid grid-cols-1 mx-7">
-                        <label
-                          className="
+
+                        {/* <!-- hidden form --> */}
+
+                        <div className="grid grid-cols-1 mx-7">
+                          <label
+                            className="
                       uppercase
                       md:text-sm
                       text-xs text-gray-500 text-light
                       font-semibold
                     "
-                        >
-                          Type
-                        </label>
-                        <select
-                          className="
+                          >
+                            Type
+                          </label>
+                          <select
+                            className="
                       py-2
                       px-3
                       rounded-lg
@@ -1133,20 +1121,10 @@ function Students() {
                       bg-gray-100
                       focus:ring-gray-600 focus:border-transparent
                     "
-                        >
-                          <option>Parent</option>
-                        </select>
-                      </div>
-                      <div
-                        className="
-                    grid grid-cols-1
-                    md:grid-cols-2
-                    gap-5
-                    md:gap-8
-                    mt-5
-                    mx-7
-                  "
-                      >
+                          >
+                            <option>Parent</option>
+                          </select>
+                        </div>
                         <div className="grid grid-cols-1">
                           <label
                             className="
@@ -1175,6 +1153,17 @@ function Students() {
                             <option>Male</option>
                           </select>
                         </div>
+                      </div>
+                      <div
+                        className="
+                    grid grid-cols-1
+                    md:grid-cols-2
+                    gap-5
+                    md:gap-8
+                    mt-5
+                    mx-7
+                  "
+                      >
                         <div className="grid grid-cols-1">
                           <label
                             className="
@@ -1202,17 +1191,6 @@ function Students() {
                             value="Hamesh khan"
                           />
                         </div>
-                      </div>
-                      <div
-                        className="
-                    grid grid-cols-1
-                    md:grid-cols-2
-                    gap-5
-                    md:gap-8
-                    mt-5
-                    mx-7
-                  "
-                      >
                         <div className="grid grid-cols-1">
                           <label
                             className="
@@ -1240,6 +1218,17 @@ function Students() {
                             value="1542578659452"
                           />
                         </div>
+                      </div>
+                      <div
+                        className="
+                    grid grid-cols-1
+                    md:grid-cols-3
+                    gap-5
+                    md:gap-8
+                    mt-5
+                    mx-7
+                  "
+                      >
                         <div className="grid grid-cols-1">
                           <label
                             className="
@@ -1267,17 +1256,6 @@ function Students() {
                             value="paren1@email.com"
                           />
                         </div>
-                      </div>
-                      <div
-                        className="
-                    grid grid-cols-1
-                    md:grid-cols-2
-                    gap-5
-                    md:gap-8
-                    mt-5
-                    mx-7
-                  "
-                      >
                         <div className="grid grid-cols-1">
                           <label
                             className="
@@ -1336,7 +1314,7 @@ function Students() {
                       <div
                         className="
                     grid grid-cols-1
-                    md:grid-cols-2
+                    md:grid-cols-3
                     gap-5
                     md:gap-8
                     mt-5
@@ -1391,70 +1369,54 @@ function Students() {
                             <input type="file" />
                           </div>
                         </div>
-                      </div>
-                      <div className="grid grid-cols-1 mt-5 mx-7">
-                        <label
-                          className="
+                        <div className="grid grid-cols-1 ">
+                          <label
+                            className="
                       uppercase
                       md:text-sm
                       text-xs text-gray-500 text-light
                       font-semibold
                       mb-1
                     "
-                        >
-                          QUALIFICATION DOCUMENT
-                        </label>
-                        <div className="flex items-center justify-left w-full">
-                          <button className="w-auto h-8 px-2 mb-3  bg-gray-100 usm:mb-3 border border-gray-500">
-                            Donwload file
-                          </button>
-                        </div>
-                        <div className="flex items-center justify-left w-full">
-                          <input type="file" />
+                          >
+                            QUALIFICATION DOCUMENT
+                          </label>
+                          <div className="flex items-center justify-left w-full">
+                            <button className="w-auto h-8 px-2 mb-3  bg-gray-100 usm:mb-3 border border-gray-500">
+                              Donwload file
+                            </button>
+                          </div>
+                          <div className="flex items-center justify-left w-full">
+                            <input type="file" />
+                          </div>
                         </div>
                       </div>
+
                       <hr className="mt-5 border" />
                       {/* <!-- institution --> */}
-                      <div className="grid grid-cols-1 mt-5 mx-7">
-                        <label
-                          className="
+                      <div
+                        className="
+                    grid grid-cols-1
+                    md:grid-cols-3
+                    gap-5
+                    md:gap-8
+                    mt-5
+                    mx-7
+                  "
+                      >
+                        <div className="grid grid-cols-1 ">
+                          <label
+                            className="
                       uppercase
                       md:text-sm
                       text-xs text-gray-500 text-light
                       font-semibold
                     "
-                        >
-                          institution/School Name
-                        </label>
-                        <input
-                          className="
-                      py-2
-                      px-3
-                      rounded-lg
-                      border border-gray-300
-                      mt-1
-                      focus:outline-none
-                      focus:ring-1
-                      focus:ring-gray-600
-                      focus:border-transparent
-                    "
-                          type="text"
-                          value="xyz school"
-                        />
-                      </div>
-                      <div className="grid grid-cols-1 mx-7">
-                        <label
-                          className="
-                      uppercase
-                      md:text-sm
-                      text-xs text-gray-500 text-light
-                      font-semibold
-                    "
-                        >
-                          Institution Type
-                        </label>
-                        <select
-                          className="
+                          >
+                            Select Class
+                          </label>
+                          <select
+                            className="
                       py-2
                       px-3
                       rounded-lg
@@ -1466,9 +1428,68 @@ function Students() {
                       focus:ring-gray-600
                       focus:border-transparent
                     "
-                        >
-                          <option>School</option>
-                        </select>
+                          >
+                            <option>School</option>
+                            <option>School</option>
+                            <option>School</option>
+                            <option>School</option>
+                          </select>
+                        </div>
+                        <div className="grid grid-cols-1 ">
+                          <label
+                            className="
+                      uppercase
+                      md:text-sm
+                      text-xs text-gray-500 text-light
+                      font-semibold
+                    "
+                          >
+                            institution/School Name
+                          </label>
+                          <input
+                            className="
+                      py-2
+                      px-3
+                      rounded-lg
+                      border border-gray-300
+                      mt-1
+                      focus:outline-none
+                      focus:ring-1
+                      focus:ring-gray-600
+                      focus:border-transparent
+                    "
+                            type="text"
+                            value="xyz school"
+                          />
+                        </div>
+                        <div className="grid grid-cols-1 ">
+                          <label
+                            className="
+                      uppercase
+                      md:text-sm
+                      text-xs text-gray-500 text-light
+                      font-semibold
+                    "
+                          >
+                            Institution Type
+                          </label>
+                          <select
+                            className="
+                      py-2
+                      px-3
+                      rounded-lg
+                      border border-gray-300
+                      mt-1
+                      bg-gray-100
+                      focus:outline-none
+                      focus:ring-1
+                      focus:ring-gray-600
+                      focus:border-transparent
+                    "
+                          >
+                            <option>School</option>
+                          </select>
+                        </div>
                       </div>
                       <div
                         className="
@@ -1540,40 +1561,13 @@ function Students() {
                       <div
                         className="
                     grid grid-cols-1
-                    md:grid-cols-2
+                    md:grid-cols-3
                     gap-5
                     md:gap-8
                     mt-5
                     mx-7
                   "
                       >
-                        <div className="grid grid-cols-1">
-                          <label
-                            className="
-                        uppercase
-                        md:text-sm
-                        text-xs text-gray-500 text-light
-                        font-semibold
-                      "
-                          >
-                            Institution/School Email
-                          </label>
-                          <input
-                            className="
-                        py-2
-                        px-3
-                        rounded-lg
-                        border border-gray-300
-                        mt-1
-                        focus:outline-none
-                        focus:ring-1
-                        focus:ring-gray-600
-                        focus:border-transparent
-                      "
-                            type="text"
-                            value="xyzschool@email.com"
-                          />
-                        </div>
                         <div className="grid grid-cols-1">
                           <label
                             className="
@@ -1601,17 +1595,6 @@ function Students() {
                             value="1524562548"
                           />
                         </div>
-                      </div>
-                      <div
-                        className="
-                    grid grid-cols-1
-                    md:grid-cols-2
-                    gap-5
-                    md:gap-8
-                    mt-5
-                    mx-7
-                  "
-                      >
                         <div className="grid grid-cols-1">
                           <label
                             className="
@@ -1670,13 +1653,40 @@ function Students() {
                       <div
                         className="
                     grid grid-cols-1
-                    md:grid-cols-2
+                    md:grid-cols-3
                     gap-5
                     md:gap-8
                     mt-5
                     mx-7
                   "
                       >
+                        <div className="grid grid-cols-1">
+                          <label
+                            className="
+                        uppercase
+                        md:text-sm
+                        text-xs text-gray-500 text-light
+                        font-semibold
+                      "
+                          >
+                            Institution/School Email
+                          </label>
+                          <input
+                            className="
+                        py-2
+                        px-3
+                        rounded-lg
+                        border border-gray-300
+                        mt-1
+                        focus:outline-none
+                        focus:ring-1
+                        focus:ring-gray-600
+                        focus:border-transparent
+                      "
+                            type="text"
+                            value="xyzschool@email.com"
+                          />
+                        </div>
                         <div className="grid grid-cols-1">
                           <label
                             className="
@@ -1755,19 +1765,29 @@ function Students() {
                       </div>
                       <hr className="mt-5 border" />
                       {/* <!-- bank account --> */}
-                      <div className="grid grid-cols-1 mt-5 mx-7">
-                        <label
-                          className="
+                      <div
+                        className="
+                    grid grid-cols-1
+                    md:grid-cols-3
+                    gap-5
+                    md:gap-8
+                    mt-5
+                    mx-7
+                  "
+                      >
+                        <div className="grid grid-cols-1 ">
+                          <label
+                            className="
                       uppercase
                       md:text-sm
                       text-xs text-gray-500 text-light
                       font-semibold
                     "
-                        >
-                          Bank Account
-                        </label>
-                        <select
-                          className="
+                          >
+                            Bank Account
+                          </label>
+                          <select
+                            className="
                       py-2
                       px-3
                       rounded-lg
@@ -1779,21 +1799,11 @@ function Students() {
                       focus:ring-gray-600
                       focus:border-transparent
                     "
-                        >
-                          <option>Bank1</option>
-                          <option>Bank2</option>
-                        </select>
-                      </div>
-                      <div
-                        className="
-                    grid grid-cols-1
-                    md:grid-cols-2
-                    gap-5
-                    md:gap-8
-                    mt-5
-                    mx-7
-                  "
-                      >
+                          >
+                            <option>Bank1</option>
+                            <option>Bank2</option>
+                          </select>
+                        </div>
                         <div className="grid grid-cols-1">
                           <label
                             className="
@@ -1851,19 +1861,30 @@ function Students() {
                           />
                         </div>
                       </div>
-                      <div className="grid grid-cols-1 mt-5 mx-7">
-                        <label
-                          className="
+                      {/* end here */}
+                      <div
+                        className="
+                    grid grid-cols-1
+                    md:grid-cols-3
+                    gap-5
+                    md:gap-8
+                    mt-5
+                    mx-7
+                  "
+                      >
+                        <div className="grid grid-cols-1">
+                          <label
+                            className="
                       uppercase
                       md:text-sm
                       text-xs text-gray-500 text-light
                       font-semibold
                     "
-                        >
-                          Account Title
-                        </label>
-                        <input
-                          className="
+                          >
+                            Account Title
+                          </label>
+                          <input
+                            className="
                       py-2
                       px-3
                       rounded-lg
@@ -1874,23 +1895,23 @@ function Students() {
                       focus:ring-gray-600
                       focus:border-transparent
                     "
-                          type="text"
-                          value="Hamesh Khan"
-                        />
-                      </div>
-                      <div className="grid grid-cols-1 mt-5 mx-7">
-                        <label
-                          className="
+                            type="text"
+                            value="Hamesh Khan"
+                          />
+                        </div>
+                        <div className="grid grid-cols-1 ">
+                          <label
+                            className="
                       uppercase
                       md:text-sm
                       text-xs text-gray-500 text-light
                       font-semibold
                     "
-                        >
-                          Account Number
-                        </label>
-                        <input
-                          className="
+                          >
+                            Account Number
+                          </label>
+                          <input
+                            className="
                       py-2
                       px-3
                       rounded-lg
@@ -1901,23 +1922,23 @@ function Students() {
                       focus:ring-gray-600
                       focus:border-transparent
                     "
-                          type="text"
-                          value="123564875962"
-                        />
-                      </div>
-                      <div className="grid grid-cols-1 mt-5 mx-7">
-                        <label
-                          className="
+                            type="text"
+                            value="123564875962"
+                          />
+                        </div>
+                        <div className="grid grid-cols-1 ">
+                          <label
+                            className="
                       uppercase
                       md:text-sm
                       text-xs text-gray-500 text-light
                       font-semibold
                     "
-                        >
-                          Account IBAN
-                        </label>
-                        <input
-                          className="
+                          >
+                            Account IBAN
+                          </label>
+                          <input
+                            className="
                       py-2
                       px-3
                       rounded-lg
@@ -1928,9 +1949,10 @@ function Students() {
                       focus:ring-gray-600
                       focus:border-transparent
                     "
-                          type="text"
-                          value="Account IBAN"
-                        />
+                            type="text"
+                            value="Account IBAN"
+                          />
+                        </div>
                       </div>
                       <div
                         className="
